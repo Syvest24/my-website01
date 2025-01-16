@@ -1,0 +1,139 @@
+body{
+  background-color: whitesmoke;
+  font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.4;
+    display: block;
+    backdrop-filter: blur(2px);
+}
+/* Header Styling Start */
+.header_section {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  border: solid rgb(36, 51, 36);
+  padding: 0.5em;
+  background: rgba(0, 0, 0, .1);
+  backdrop-filter: blur(1px);
+  border-radius: 13%;
+  animation-name: head00;
+  animation-duration: 4s;
+}
+@keyframes head00 {
+  from {background-color:#6fffe9 ;}
+  to {background-color: goldenrod;}
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li:hover{
+  background-color: goldenrod;
+  
+}
+.navigation-bar {
+  display: block;
+  margin: 3px;
+
+}
+/* END of Header Styling */
+
+/* START ABOUT STYLING */
+.section_1{
+  display: flex;
+  align-items: center;
+  margin: 35px;
+  padding: 25px;
+  justify-content: space-between;
+  border-radius: 10%;
+  border-bottom: 2px solid goldenrod;
+  border-right: 2px solid goldenrod;
+  backdrop-filter: blur(15px);
+ 
+
+}
+.man-img{
+  padding:35px;
+  width: 290px;
+  display:flex;
+  border-radius: 40%;
+
+}
+/* START GALERY STYLING */
+.galery001{
+  width: 90%;
+  padding:20px;
+  margin: 100px auto;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 2px solid goldenrod;
+  border-left: 2px solid goldenrod;
+  border-top-left-radius: 10%;
+  border-bottom-left-radius: 10px;
+  
+}
+.box{
+  width: 250px;
+  margin:0 10px;
+  box-shadow: 0 0 20px 2px gray;
+  transition: 1s;
+  display: block;
+  border-radius: 15px;
+
+
+}
+.box img{
+  display: block;
+  width:100%;
+  height: 90%;
+  border-radius: 15px;
+  justify-content: center;
+ 
+
+}
+.box:hover{
+  transform:scale(1.3);
+  z-index: 2;
+
+}
+h3{
+  text-align: center;
+  margin:1px
+}
+p{
+  backdrop-filter: blur(15px);
+}
+/* H2 Styling */
+  h2{
+ text-align: center;
+color: black;
+background-color: goldenrod;
+margin: 3px;
+padding: 15px;
+  
+  }
+
+  footer{
+    background-color: none;
+    border: 3px;
+    border-radius: 25%;
+    display: flex;
+  justify-content: center;
+  padding:0.5em;
+  background: rgba(0, 0, 0, .1);
+  backdrop-filter: blur(10px);
+  } 

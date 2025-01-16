@@ -1,0 +1,269 @@
+body{
+  background-color: whitesmoke;
+  font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.4;
+    
+}
+:root{
+  ---cir-neon: hsl(317 100% 54%);
+  ---cir-bg: hsl(323 21% 16%);
+  ---cir-4: hsl(#2d8f85);
+  
+}
+
+@media screen and (max-width: 768px) {
+  .header_section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .galery001 {
+    flex-direction: column;
+  }
+
+  .box {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
+/* Header Styling Start */
+.header_section {
+  display: flex;
+  justify-content: space-between;
+  background-image: url("img/g7.jp");
+  border: solid rgb(36, 51, 36);
+  padding: 0.5em;
+  border-radius: 15%;
+  background-size: cover;
+  background: rgba(0, 0, 0, .1);
+  backdrop-filter: blur(7px);
+  animation-name: head00;
+  animation-duration: 3s;
+  
+}
+@keyframes head00 {
+  from {background-color:#6fffe9 ;}
+  to {background-color: goldenrod;}
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: antiquewhite;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li:hover{
+  background-color: goldenrod;
+  
+}
+.navigation-bar {
+  display: block;
+  margin: 3px;
+
+}
+/* END of Header styling */
+
+h1{
+  text-decoration: darkslategray;
+  text-align: center;
+  color: antiquewhite;
+  background: rgba(0, 0, 0, .1);
+  backdrop-filter: blur(5px);
+ 
+}
+
+main{
+  padding:25px
+}
+/* Section One Styling Start*/
+.section-one{
+  display: flex;
+  align-items: center;
+  margin: 35px;
+  padding: 25px;
+  justify-content: space-between;
+  color: antiquewhite;
+ 
+}
+.p-sec-one{
+  font-family: cursive;
+  font-size: xx-large;
+}
+.section-one .p-sec-one-3{
+  display: blok;
+  justify-content: end;
+}
+.img1{
+  height: 500px;
+  border-radius: 50%;
+  transition: .2s;
+  margin:auto;
+  transform:scale(1em)
+}
+/* END OF SECTION ONE STYLING */
+
+/* Section two styling begin */
+.section-two{
+ 
+  margin:600px;
+    display: block;
+    margin: 8px;
+    height: 650px;
+    width: 800px;
+    text-align: center;
+
+}
+.section-two{
+  display: block;
+    height: 650px;
+    width: 900px;
+    padding: 5em;
+    margin: 45px;
+    border: 3pc solid green;
+    border-color: white;
+    border-width: 8px;
+    text-align: center;
+    color:antiquewhite;
+     backdrop-filter: blur(10px);
+     border-radius: 10%;
+  
+
+}
+
+.section-two-p2{
+  border-style: groove;
+  width: 400px;
+  display:block;
+  color:antiquewhite
+
+}
+.section-two-p1{
+  border-style: groove;
+  width: 400px;
+  color:antiquewhite
+}
+
+h2 {
+
+  padding: 3pc;
+  margin: auto;
+  color: antiquewhite;
+}
+.div-sec-2{
+  width:cover;
+  height:auto;
+  padding:10px;
+  background-image: url("img/f1.jpg");
+  background-size: cover;
+  color: dimgray;
+
+}
+
+
+/* Start Styling section Three */
+.section-three{
+  display: flex;
+  align-items: auto;
+  margin: 35px;
+  padding: 5px;
+  justify-content: space-between;
+}
+.img2{
+  width: 450px;
+  background-color: #127475;
+    height: 80%;
+    justify-content: space-between;
+    margin: 25px;
+    display: flex;
+    border-radius: 10%;
+}
+
+.section-three{
+  background-color: none ;
+  font-family: cursive;
+  font-size: xx-large;
+  margin:35px;
+  padding:25px;
+  color: antiquewhite;
+  border-bottom: 5px solid goldenrod;
+  border-right: 5px solid goldenrod;
+  border-radius: 15%;
+
+}
+/* Section Four styling Start */
+.section-four{
+  display: flex;
+  text-align: center;
+  color: antiquewhite;
+  padding:20px;
+  justify-content:space-between;
+  
+}
+.p4{
+  backdrop-filter: blur(3px);
+  border-right: 5px solid goldenrod;
+}
+/* BUTTON STYLING START */
+.button{
+  font-size: 2.3rem;
+  text-decoration: none;
+  color:var(---cir-4);
+  border:var(--cr-neon) 0.125em solid;
+  text-shadow: 0 0 0.125 hsl(0 0% 100% 0.5em) 0 0 0.75em currentColor;
+  box-shadow: inset 0 0 0.5em 0 var(--cr-neon), 0 0 0.5em 0 var(--cr-neon);
+    padding: 0.25em 1em;
+    display: inline-block;
+    border-radius: 0.25em;
+    background-color: goldenrod;
+    animation-name: button;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  
+  }
+  @keyframes button {
+    from {background-color: goldenrod;}
+    to {background-color:var(---cir-bg);}
+  }
+  
+  footer{
+    background-color: none;
+    border: 3px;
+    border-radius: 25%;
+    display: flex;
+  justify-content: center;
+  padding:0.5em;
+  background: rgba(0, 0, 0, .1);
+  backdrop-filter: blur(10px);
+  }
+  .img3{
+    border: 5px solid sandybrown;
+    border-radius: 50%;
+  }
+    
+  
+  h2{
+    display: flex;
+    justify-content: center;
+    margin:45px;
+   padding:0.5em;
+   
+  }
+  h3{
+    display: flex; 
+  justify-content: space-between; 
+}
+p{
+  backdrop-filter: blur(3px);
+}
