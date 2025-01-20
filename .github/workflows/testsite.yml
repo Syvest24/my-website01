@@ -1,29 +1,47 @@
-name: test_site 
+name: Lint, Build, and Deploy to Netlify
 
 on:
   push:
-    paths:
-      - '**/*.yml'
-      - '**/*.yaml'
+    branches:
+      - main  # Trigger on pushes to the main branch
   pull_request:
-    paths:
-      - '**/*.yml'
-      - '**/*.yaml'
+    branches:
+      - main  # Trigger on pull requests to the main branch
+
 jobs:
-  lint:
+  lint-build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      # Step 1: Checkout the code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Python (for yamllint)
-        uses: actions/setup-python@v4
+      # Step 2: Validate HTML files
+      - name: Lint HTML files
+        uses: chrisgladd/html-validate-action@v1.1
         with:
-          python-version: '3.x'
+          path: "./"  # Validate all HTML files in the repository
 
-      - name: Install yamllint
-        run: pip install yamllint
+      # Step 3: Lint CSS files
+      - name: Lint CSS files
+        uses: stylelint/stylelint-action@v2
+        with:
+          files: "**/*.css"
 
-      - name: Run yamllint
-        run: yamllint . --strict
+      # Step 4: Lint JavaScript files
+      - name: Lint JavaScript files
+        uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-check
+          eslint_flags: "."  # Target all JavaScript files in the repo
+
+      # Step 5: Deploy to Netlify
+      - name: Deploy to Netlify
+        uses: netlify/actions/cli@v4
+        with:
+          args: deploy --dir=./ --prod
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
