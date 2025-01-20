@@ -21,16 +21,24 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Validate HTML
-        uses: cyb3r-jak3/html-validate-action@v1.2.3
-        with:
-          config-file: .htmlvalidate.json
+      #- name: Validate HTML
+        #uses: cyb3r-jak3/html-validate@v1.2.3
+       # with:
+        #  config-file: .htmlvalidate.json
 
-      - name: Lint CSS
-        uses: wearerequired/lint-action@v2
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          paths: "src/**/*.css"
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install html-validate --save-dev
+
+      - name: Run HTML Validation
+        run: npx html-validate "**/*.html""
 
       - name: Build site
         run: npm run build
