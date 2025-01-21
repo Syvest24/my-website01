@@ -21,8 +21,8 @@ jobs:
           node-version: 16 # Adjust Node.js version as needed
 
       # Step 3: Install Dependencies
-      - name: Install dependencies
-        run: npm install
+      #- name: Install dependencies
+       # run: npm install
 
       # Step 4: Lint HTML
       - name: Lint HTML files
