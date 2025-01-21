@@ -1,9 +1,4 @@
 {
-    "extends": "stylelint-config-recommended",
-    "rules": {
-      "block-no-empty": true,
-      "color-no-invalid-hex": true,
-      "unit-whitelist": ["em", "rem", "%", "s"]
-    }
+    "extends": "stylelint-config-recommended"
   }
   

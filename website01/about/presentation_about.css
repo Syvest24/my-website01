@@ -19,6 +19,22 @@ body{
   animation-name: head00;
   animation-duration: 4s;
 }
+@media screen and (max-width: 768px) {
+  .header_section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .galery001 {
+    flex-direction: column;
+  }
+
+  .box {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
 @keyframes head00 {
   from {background-color:#6fffe9 ;}
   to {background-color: goldenrod;}

@@ -1,8 +1,5 @@
 {
-    "extends": ["html-validate:recommended"],
-    "rules": {
-      "void-style": "off",
-      "no-inline-style": "warn"
-    }
+    "extends": ["html-validate:recommended"]
+  
   }
   
